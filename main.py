@@ -9,7 +9,7 @@ def ocr(path):
     Operations in development :
         * Read multiple files from a directory.
         * Write text to text file.
-        * Find OCR tool for extracting with coordinates and use pagexml to write data in xml format
+        * Find OCR tool for extracting with coordinates to write data in xml format.
         * GUI or micro service
     :param path: path to the image
     :return: str, TExt found by OCR in the image
