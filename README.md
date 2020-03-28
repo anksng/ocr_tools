@@ -14,7 +14,7 @@ Mac OS (python 3.7+) or Linux (python 3.6+)
 3. Paste the path of root dir where files are stored when prompted.
 This should start processing the image and print the text output. 
 <br>
-To `stop` the process at any time - press `control(^) + z`. 
+To stop the process at any time - press `control(^) + z`. 
 <br>
 
 # Ubuntu 18+
