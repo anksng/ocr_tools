@@ -1,5 +1,6 @@
 import PIL
 import pytesseract
+import os
 from PIL import Image
 import jsonargparse
 
@@ -9,14 +10,23 @@ def ocr(path):
     Operations in development :
         * Read multiple files from a directory.
         * Write text to text file.
-        * Find OCR tool for extracting with coordinates to write data in xml format.
+        * Find OCR tool for extracting with coordinates and use pagexml to write data in xml format
         * GUI or micro service
     :param path: path to the image
-    :return: str, TExt found by OCR in the image
+    :return: str, Text found by OCR in the image
     """
+    # paths = glob.glob(path)
+    # for i in paths:
     images = Image.open(path)
+    # add pre processing here. Find pre processing discrepencies for various document types.
     img = images.rotate(-90)
+
+    # write to text file
+    with open(path.split('/')[-1].split('.')[0] + '.txt', 'w') as f:
+        f.write(pytesseract.image_to_string(img))
+
     print(pytesseract.image_to_string(img))
+    print('Text output in file -', 'ocr_tools/', path.split('/')[-1].split('.')[0] + '.txt')
 
 
 
