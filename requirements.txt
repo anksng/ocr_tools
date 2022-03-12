@@ -1,3 +1,3 @@
 pytesseract
-Pillow==7.0.0
+Pillow==9.0.1
 jsonargparse==2.20.0
